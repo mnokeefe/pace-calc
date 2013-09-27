@@ -1,0 +1,49 @@
+/*  ------------------------------------------------------------------------
+    Requires: Bourbon
+    ------------------------------------------------------------------------  */
+
+$sans : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: Georgia, serif;
+
+body {
+  font-family: $sans;
+  font-size: em($base-font-size);
+  line-height: em($base-line-height);
+}
+
+// Headings
+
+h1, .alpha {
+  font-size: em(32);
+}
+
+h2, .beta {
+  font-size: em(28);
+}
+
+h3, .gamma {
+  font-size: em(24);
+}
+
+h4, .delta {
+  font-size: em(20);
+}
+
+h5, .epsilon {
+  font-size: em(16);
+}
+
+h6, .zeta {
+  font-size: em(14);
+}
+
+// Links
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $link-colour;
+  &:hover { 
+    text-decoration: underline;
+  }
+}

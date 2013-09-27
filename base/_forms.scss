@@ -1,0 +1,20 @@
+/*  ------------------------------------------------------------------------
+    Requires: Bourbon
+    ------------------------------------------------------------------------  */
+
+$form-padding: 5px;
+
+#{$all-text-inputs} {
+  display: block;
+  padding: $form-padding;
+  width: 100%;
+}
+
+#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+  border: 1px solid $blue;
+  box-shadow: 0 0 6px $blue;
+}
+
+input[type="submit"], input[type="reset"] {
+  @include button;
+}
