@@ -44,6 +44,6 @@ a {
   cursor: pointer;
   color: $link-colour;
   &:hover { 
-    text-decoration: underline;
+    border-bottom: 1px solid $link-colour;
   }
 }
