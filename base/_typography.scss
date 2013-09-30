@@ -4,37 +4,44 @@
 
 $sans : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif: Georgia, serif;
+$heading-font-family: $sans;
 
 body {
   font-family: $sans;
-  font-size: em($base-font-size);
-  line-height: em($base-line-height);
+  font-size: #{$base-font-size}px;
+  line-height: ($base-line-height / $base-font-size);
 }
 
 // Headings
 
 h1, .alpha {
   font-size: em(32);
+  font-family: $heading-font-family;
 }
 
 h2, .beta {
   font-size: em(28);
+  font-family: $heading-font-family;
 }
 
 h3, .gamma {
   font-size: em(24);
+  font-family: $heading-font-family;
 }
 
 h4, .delta {
   font-size: em(20);
+  font-family: $heading-font-family;
 }
 
 h5, .epsilon {
   font-size: em(16);
+  font-family: $heading-font-family;
 }
 
 h6, .zeta {
   font-size: em(14);
+  font-family: $heading-font-family;
 }
 
 // Links
