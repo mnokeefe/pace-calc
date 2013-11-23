@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@import 'base/functions';
 @import 'settings';
 @import 'base/normalize';
 
@@ -9,3 +10,17 @@
 
 // Base
 @import 'base/typography';
+
+// Some global overrides
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Make sure textarea takes on height automatically
+textarea { height: auto; min-height: 50px; }
+
+// Make select elements 100% width by default
+select { width: 100%; }
