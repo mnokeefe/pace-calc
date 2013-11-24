@@ -1,3 +1,11 @@
+// Foundation 5 Unit stripper
+// --------------------------
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
 // Foundation 5 REM calc
 // ---------------------
 // New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
