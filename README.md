@@ -1,3 +1,10 @@
-# MOK Sass
+# MOK Boilerplate
 
-Sass starting point with Bourbon and Neat.
+SASS styles using Bourbon & Neat
+
+Gulp with:
+
+- Pixel fallback for REMs
+- Auto prefixer
+- Minification & optimisation
+- LiveReload

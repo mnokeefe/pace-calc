@@ -1,0 +1,63 @@
+// TYPE RAMP
+////////////////////////////////////////////////////////////////////////////////
+
+$h1-font-size: 2rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
+
+$base-font-size: 100%;
+$base-line-height: 1.5;
+
+// PALLETTE
+////////////////////////////////////////////////////////////////////////////////
+
+$black: #000000;
+$white: #ffffff;
+
+
+
+// Social
+$facebook: #3B5998;
+$flickr: #FE0883;
+$google: #C63D2D;
+$instagram: #4E433C;
+$linkedin: #4875B4;
+$pinterest: #910101;
+$tumblr: #34526F;
+$twitter: #00A0D1;
+$vimeo: #44BBFF;
+$youtube: #C4302B;
+
+$link-colour: $white;
+$border-color: blue;
+$form-focus-color: blue;
+
+$button-colour: blue;
+$button-border-colour: darken($button-colour, 10%);
+
+// MEDIA QUERIES
+////////////////////////////////////////////////////////////////////////////////
+
+$break-small: 0em;
+$break-medium: 40em;
+$break-large: 64em;
+$break-xlarge: 90em;
+$break-xxlarge: 120em;
+
+@mixin respond-to($media) {
+  @if $media == small-only {
+    @media only screen and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == medium-up {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == medium-only {
+    @media only screen and (min-width: $break-medium) and (max-width: $break-large) { @content; }
+  }
+  @else if $media == large-up {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}

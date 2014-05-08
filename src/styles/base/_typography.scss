@@ -1,0 +1,57 @@
+$sans: 'Lato', sans-serif;
+$serif: Georgia, serif;
+$heading-font-family: 'Lato', sans-serif;
+
+html, body {
+  font-family: $sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+}
+
+// HEADINGS
+////////////////////////////////////////////////////////////////////////////////
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+// LINKS
+////////////////////////////////////////////////////////////////////////////////
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $link-colour;
+  &:hover {
+    border-bottom: 1px solid $link-colour;
+  }
+}

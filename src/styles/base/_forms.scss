@@ -1,0 +1,79 @@
+$form-padding: 0.5rem;
+
+fieldset {
+  border: 1px solid $border-color;
+  margin: 0 ($base-line-height / 2) ($base-line-height / 2) ($base-line-height / 2);
+  padding: $base-line-height;
+}
+
+input,
+label,
+select {
+  display: block;
+  margin-bottom: $base-line-height / 4;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: $base-line-height / 4;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+@mixin form-item {
+  padding: $form-padding;
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd; // Make it a variable
+  margin: 0 0 $base-line-height / 2;
+  &:focus { 
+    border: 1px solid $form-focus-color;
+    outline: none;
+  }
+}
+
+@mixin submit-button {
+  color: $white;
+  padding: 0.5rem 2rem;
+  background: $button-colour;
+  border: 1px solid $button-border-colour;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  @include form-item;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $base-line-height / 4;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  @include submit-button;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+  background: lighten($button-colour, 10%);
+}
