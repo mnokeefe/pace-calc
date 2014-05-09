@@ -10,7 +10,7 @@
 
 ## Structure
 
-Adjust gulpfile.js if any changes are made to the overall structure.
+Adjust `gulpfile.js` if any changes are made to the overall structure.
 
     mok-sass/
     |
@@ -25,14 +25,13 @@ Adjust gulpfile.js if any changes are made to the overall structure.
     |   |   |-- _settings.scss        # Project settings
     |   |   `-- style.scss            # Primary Sass file
     |   |
-    |   |-- scripts/
     |   |
-    |   `-- images/
+    |   |-- scripts/                  # JavaScript
+    |   `-- images/                   # Images
+    |
     |
     `-- assets/
         |
         |-- styles/                   # Outputted CSS
-        |
         |-- scripts/                  # Outputted JavaScript
-        |
         `-- images/                   # Optimised images
