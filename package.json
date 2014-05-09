@@ -1,0 +1,32 @@
+{
+  "name": "mok-sass",
+  "description": "Matt's Boilerplate",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mnokeefe/mok-sass",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mnokeefe/mok-sass.git"
+  },
+  "author": "Matt O'Keefe <matt@mattokeefe.co.uk> (http://mattokeefe.co.uk/)",
+  "tags": [
+    "gulp",
+    "sass"
+  ],
+  "devDependencies": {
+    "gulp": "",
+    "gulp-sass": "",
+    "gulp-pixrem": "",
+    "gulp-autoprefixer": "",
+    "gulp-minify-css": "",
+    "gulp-jshint": "",
+    "gulp-imagemin": "",
+    "gulp-rename": "",
+    "gulp-clean": "",
+    "gulp-concat": "",
+    "gulp-notify": "",
+    "gulp-cache": "",
+    "gulp-livereload": "",
+    "gulp-uglify": "",
+    "node-neat": ""
+  }
+}

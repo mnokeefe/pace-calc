@@ -35,3 +35,7 @@ Adjust `gulpfile.js` if any changes are made to the overall structure.
         |-- styles/                   # Outputted CSS
         |-- scripts/                  # Outputted JavaScript
         `-- images/                   # Optimised images
+
+## Get started
+
+Run `npm install` to install `gulp watch` for LiveReload in development, `gulp clean` to clena up the asset directory before deployment.

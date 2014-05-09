@@ -1,5 +1,3 @@
-// http://markgoodyear.com/2014/01/getting-started-with-gulp/
-
 // Load plugins
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
