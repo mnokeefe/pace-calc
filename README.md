@@ -6,7 +6,7 @@
 - Pixel fallback for REMs
 - Auto prefixer
 - Minification & optimisation of CSS, JS and Images
-- LiveReload
+- LiveReload server
 
 ## Structure
 
