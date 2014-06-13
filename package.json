@@ -1,6 +1,6 @@
 {
   "name": "mok-sass",
-  "description": "Matt's Boilerplate",
+  "description": "Gulp with LiveReload for front end dev",
   "version": "1.0.0",
   "homepage": "https://github.com/mnokeefe/mok-sass",
   "repository": {
@@ -10,7 +10,9 @@
   "author": "Matt O'Keefe <matt@mattokeefe.co.uk> (http://mattokeefe.co.uk/)",
   "tags": [
     "gulp",
-    "sass"
+    "sass",
+    "bourbon",
+    "neat"
   ],
   "devDependencies": {
     "gulp": "",

@@ -6,7 +6,7 @@
 - Pixel fallback for REMs
 - Auto prefixer
 - Minification & optimisation of CSS, JS and Images
-- LiveReload
+- LiveReload server
 
 ## Structure
 
@@ -38,4 +38,8 @@ Adjust `gulpfile.js` if any changes are made to the overall structure.
 
 ## Get started
 
+<<<<<<< HEAD
+Run `npm install` to install, `gulp watch` for LiveReload in development, `gulp clean` to clean up the asset directory before deployment.
+=======
 Run `npm install` to install `gulp watch` for LiveReload in development, `gulp clean` to clena up the asset directory before deployment.
+>>>>>>> origin/dev
