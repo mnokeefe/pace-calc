@@ -39,7 +39,11 @@ Adjust `gulpfile.js` if any changes are made to the overall structure.
 ## Get started
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Run `npm install` to install, `gulp watch` for LiveReload in development, `gulp clean` to clean up the asset directory before deployment.
+=======
+Run `npm install` to install `gulp watch` for LiveReload in development, `gulp clean` to clena up the asset directory before deployment.
+>>>>>>> origin/dev
 =======
 Run `npm install` to install `gulp watch` for LiveReload in development, `gulp clean` to clena up the asset directory before deployment.
 >>>>>>> origin/dev
