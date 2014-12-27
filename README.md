@@ -1,41 +1,29 @@
-# MOK Boilerplate
+# HELLO!
 
-## Included
+5K
+in 20:00
+is 4:00/km
 
-- Boilerplate SCSS using Bourbon & Neat
-- Pixel fallback for REMs
-- Auto prefixer
-- Minification & optimisation of CSS, JS and Images
-- LiveReload server
+DISTANCE (Km or Mi)
+TIME (HH:MM:SS)
+PACE (Min/Km or Min/Mi)
+SPEED (Kph or Mph) 
 
-## Structure
+## DISTANCE
 
-Adjust `gulpfile.js` if any changes are made to the overall structure.
+- Entered directly by user
+- Store it in metres?
+- Choose from grid of race types - 1500m, 1mi, 5K, 10K, 13.1mi, 26.2mi or custom distance
 
-    mok-sass/
-    |
-    |-- src/
-    |   |
-    |   |-- styles/
-    |   |   |
-    |   |   |-- base/                 # Base styles
-    |   |   |-- modules/              # Common modules
-    |   |   |-- pages/                # Page specific styles
-    |   |   |-- vendor/               # CSS or Sass from other projects
-    |   |   |-- _settings.scss        # Project settings
-    |   |   `-- style.scss            # Primary Sass file
-    |   |
-    |   |
-    |   |-- scripts/                  # JavaScript
-    |   `-- images/                   # Images
-    |
-    |
-    `-- assets/
-        |
-        |-- styles/                   # Outputted CSS
-        |-- scripts/                  # Outputted JavaScript
-        `-- images/                   # Optimised images
+## TIME
 
-## Get started
+- Entered by user OR calculated when pace is changed
+- Store it in seconds
+- Three seperate boxes - HH, MM, SS
+- On pace change new TIME = new PACE in Km / DISTANCE*1000
 
-Run `npm install` to install `gulp watch` for LiveReload in development, `gulp clean` to clena up the asset directory before deployment.
+## PACE
+
+- Entered by user OR calculated when time is changed
+- Store in seconds per Km
+- PACE in Kms = TIME*60 / DISTANCE*1000

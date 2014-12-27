@@ -12,16 +12,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload');
+    connect = require('gulp-connect');
 
 // Styles
 gulp.task('styles', function() {
   return gulp.src('src/styles/style.scss')
-    .pipe(sass({
-      // includePaths: require('node-neat').with('other/path', 'another/path')
-      // - or -
-      includePaths: require('node-neat').includePaths
-    }))
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('assets/styles'))
@@ -34,14 +29,14 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('src/scripts/**/*.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('assets/scripts'))
+    .pipe(gulp.dest('assets/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/scripts'))
+    .pipe(gulp.dest('assets/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -55,7 +50,7 @@ gulp.task('images', function() {
 
 // Clean
 gulp.task('clean', function() {
-  return gulp.src(['assets/styles', 'assets/scripts', 'assets/images'], {read: false})
+  return gulp.src(['assets/styles', 'assets/js', 'assets/images'], {read: false})
     .pipe(clean());
 });
 
@@ -67,17 +62,13 @@ gulp.task('default', ['clean'], function() {
 // Watch
 gulp.task('watch', function() {
 
-  // Watch .scss files
+  // Dev server with livereload
+  connect.server({ livereload: true });
+
+  // Watch assets
   gulp.watch('src/styles/**/*.scss', ['styles']);
-
-  // Watch .js files
-  gulp.watch('src/scripts/**/*.js', ['scripts']);
-
-  // Watch image files
+  gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/images/**/*', ['images']);
-
-  // Create LiveReload server
-  var server = livereload();
 
   // Watch any files in assets/, reload on change
   gulp.watch(['assets/**']).on('change', function(file) {

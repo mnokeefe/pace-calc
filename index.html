@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Running Calc</title>
+    <link rel="stylesheet" href="assets/styles/style.min.css"/>
+    <script src="http://fb.me/react-with-addons-0.12.1.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+  </head>
+  <body>
+    <script type="text/jsx">
+      /*** @jsx React.DOM */
+      var APP = React.createClass({
+        getInitialState: function() {
+          return {
+            distance: 10, // Kilometres
+            time: 2400, // seconds
+            pace: 240 // seconds per Km
+          }
+        },
+        updateDistance: function() {
+          var distance = this.refs.distance.getDOMNode().value;
+          var time = this.state.pace * distance;
+
+          this.setState({
+            distance: distance,
+            time: time
+          })
+        },
+        updateTime: function() {
+          var time = this.refs.time.getDOMNode().value;
+          var pace = time / this.state.distance;
+
+          this.setState({
+            time: time,
+            pace: pace
+          })
+        },
+        updatePace: function() {
+          var pace = this.refs.pace.getDOMNode().value;
+          var time = pace * this.state.distance;
+
+          this.setState({
+            time: time,
+            pace: pace
+          })
+        },
+        render: function() {
+          return (
+            <div>
+              <div>
+                <label>Distance</label>
+                <input ref="distance" type="number" onChange={this.updateDistance} value={this.state.distance} />
+              </div>
+              <div>
+                <label>Time</label>
+                <input ref="time" type="number" onChange={this.updateTime} value={this.state.time} />
+              </div>
+              <div>
+                <label>Pace</label>
+                <input ref="pace" type="number" onChange={this.updatePace} value={this.state.pace} />
+              </div>
+            </div>
+          )
+        }
+      });
+
+      React.render(
+        <APP />,
+        document.body)
+    </script>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

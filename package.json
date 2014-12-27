@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "homepage": "https://github.com/mnokeefe/mok-sass",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mnokeefe/mok-sass.git"
+    "type": "git",
+    "url": "https://github.com/mnokeefe/mok-sass.git"
   },
   "author": "Matt O'Keefe <matt@mattokeefe.co.uk> (http://mattokeefe.co.uk/)",
   "tags": [
@@ -29,6 +29,6 @@
     "gulp-cache": "",
     "gulp-livereload": "",
     "gulp-uglify": "",
-    "node-neat": ""
+    "gulp-connect": "~2.2.0"
   }
 }

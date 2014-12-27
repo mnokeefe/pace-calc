@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Running Calc</title>
+    <link rel="stylesheet" href="assets/styles/style.min.css"/>
+    <script src="http://fb.me/react-0.8.0.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.8.0.js"></script>
+  </head>
+  <body>
+    <script type="text/jsx">
+      /*** @jsx React.DOM */
+      var APP = React.createClass({
+        getInitialState: function() {
+          return {
+            miles: 0,
+            kilometres: 0
+          }
+        },
+        updateKm: function() {
+          var kilometres = this.refs.kilometres.getDOMNode().value;
+          var miles = (kilometres / 1.609344).toFixed(2);
+
+          this.setState({
+            miles: miles,
+            kilometres: kilometres
+          })
+        },
+        updateMiles: function() {
+          var miles = this.refs.miles.getDOMNode().value;
+          var kilometres = (miles * 1.609344).toFixed(2);
+
+          this.setState({
+            miles: miles,
+            kilometres: kilometres
+          })
+        },
+        render: function() {
+          return (
+            <div>
+              <label>Miles</label>
+              <input ref="miles" type="number" onChange={this.updateMiles} value={this.state.miles} />
+              <label>Kilometres</label>
+              <input ref="kilometres" type="number" onChange={this.updateKm} value={this.state.kilometres}/>
+            </div>
+          )
+        }
+      });
+
+      React.renderComponent(
+        <APP />,
+        document.body)
+    </script>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

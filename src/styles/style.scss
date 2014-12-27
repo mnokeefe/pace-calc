@@ -3,9 +3,6 @@
 // IMPORTS
 ////////////////////////////////////////////////////////////////////////////////
 
-@import "bourbon";
-@import "neat";
-
 @import 'settings';
 @import 'base/base';
 @import 'modules/modules';
@@ -14,30 +11,25 @@
 // GLOBAL OVERRIDES
 ////////////////////////////////////////////////////////////////////////////////
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
-
-// Get rid of gap under images by making them display: inline-block; by default
-img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-// Make sure textarea takes on height automatically
-textarea {
-  height: auto;
-  min-height: 50px;
-}
-
-// Make select elements 100% width by default
-select {
-  width: 100%;
+* {
+  box-sizing: border-box;
 }
 
 // PROJECT
 ////////////////////////////////////////////////////////////////////////////////
 
-.container {
-  @include outer-container();
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid__item {
+  flex-grow: 1;
+  min-width: 33.33%;
+  background: grey;
+  border: 0.25rem solid white;
+  height: 10rem;
 }
