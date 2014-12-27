@@ -15,7 +15,9 @@
           return {
             distance: 10, // Kilometres
             time: 2400, // seconds
-            pace: 240 // seconds per Km
+            timeHMS: "TODO",
+            pace: 240, // seconds per Km
+            paceHMS: "TODO"
           }
         },
         updateDistance: function() {
@@ -30,20 +32,32 @@
         updateTime: function() {
           var time = this.refs.time.getDOMNode().value;
           var pace = time / this.state.distance;
+          var timeHMS = this.secondsToHMS(time);
+          var paceHMS = this.secondsToHMS(pace);
+
+          this.setState({
+            time: time,
+            timeHMS: timeHMS,
+            pace: pace,
+            paceHMS: paceHMS
+          })
+        },
+        updatePace: function() {
+          var pace = this.refs.pace.getDOMNode().value;
+          var time = pace * this.state.distance;
+          var paceHMS = this.secondsToHMS(pace);
 
           this.setState({
             time: time,
             pace: pace
           })
         },
-        updatePace: function() {
-          var pace = this.refs.pace.getDOMNode().value;
-          var time = pace * this.state.distance;
-
-          this.setState({
-            time: time,
-            pace: pace
-          })
+        secondsToHMS: function(d) {
+          d = Number(d);
+          var h = Math.floor(d / 3600);
+          var m = Math.floor(d % 3600 / 60);
+          var s = Math.floor(d % 3600 % 60);
+          return ((h > 0 ? (h >= 10 ? h : '0' + h): '00') + ':' + (m > 0 ? (m >= 10 ? m : '0' + m): '00') + ':' + (s > 0 ? (s >= 10 ? s : '0' + s): '00')  );
         },
         render: function() {
           return (
@@ -55,10 +69,12 @@
               <div>
                 <label>Time</label>
                 <input ref="time" type="number" onChange={this.updateTime} value={this.state.time} />
+                <input ref="timeHMS" type="text" readOnly value={this.state.timeHMS} />
               </div>
               <div>
                 <label>Pace</label>
                 <input ref="pace" type="number" onChange={this.updatePace} value={this.state.pace} />
+                <input ref="paceHMS" type="text" readOnly value={this.state.paceHMS} />
               </div>
             </div>
           )
